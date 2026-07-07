@@ -1,4 +1,4 @@
-# Customer Experience Analytics Platform
+# Customer Experience Analytics Solution
 
 > **From fragmented operational data to actionable business insights.**
 
