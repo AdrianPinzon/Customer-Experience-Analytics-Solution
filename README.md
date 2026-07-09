@@ -8,6 +8,15 @@ An end-to-end Business Intelligence solution that centralizes customer satisfact
 >
 > This repository presents a real-world Business Intelligence case study developed for the customer experience area of a financial institution. To respect confidentiality and intellectual property, proprietary datasets, ETL workflows, SQL scripts, and Power BI files are intentionally omitted. The focus of this repository is to showcase the solution architecture, technical design decisions, and engineering approach.
 
+## Key Highlights
+
+- Designed and implemented an end-to-end Business Intelligence solution.
+- Automated ETL pipelines using Pentaho Data Integration.
+- Built a dimensional PostgreSQL data warehouse following Kimball methodology.
+- Developed Power BI dashboards for customer experience monitoring.
+- Consolidated multiple operational data sources into a single source of truth.
+- Enabled KPI tracking for customer satisfaction and operational performance.
+
 ## Overview
 
 This project presents an end-to-end Business Intelligence solution designed to transform fragmented operational data into reliable business insights.
@@ -22,17 +31,19 @@ Customer experience data was distributed across multiple operational spreadsheet
 
 Without a centralized analytical repository, reporting processes were largely manual, limiting the organization's ability to obtain timely and reliable insights for decision making.
 
-The objective of this project was to design a Business Intelligence solution capable of integrating heterogeneous data sources, organizing information within a dimensional data warehouse, and delivering interactive dashboards that support operational and strategic analysis.
+The project addresses these challenges by integrating heterogeneous operational data into a centralized dimensional data warehouse, enabling consistent reporting, historical analysis, and interactive business intelligence dashboards.
 
 **Project Goal**
 
-Design and implement an end-to-end Business Intelligence solution capable of integrating operational data, ensuring data quality, and delivering actionable insights through dimensional modeling and interactive dashboards.
+Build a scalable Business Intelligence solution capable of integrating operational data, ensuring data quality, and delivering actionable insights through dimensional modeling and interactive dashboards.
 
 ## Solution Architecture
 
 The solution follows a layered Business Intelligence architecture that separates data ingestion, transformation, storage, and visualization into independent components.
 
 This design improves data quality, simplifies maintenance, and provides a reliable foundation for business reporting and analytics.
+
+The architecture follows a modern layered BI approach that separates ingestion, transformation, storage, and visualization, ensuring scalability, maintainability, and reliable analytics.
 
 <p align="center">
   <img src="assets/architecture.png" alt="Solution Architecture" width="500"/>
@@ -44,3 +55,21 @@ This design improves data quality, simplifies maintenance, and provides a reliab
 | **ETL**            | Extract, clean, validate, standardize, transform and load data using Pentaho Data Integration.   |
 | **Data Warehouse** | Store integrated data in a PostgreSQL dimensional model optimized for analytics. |
 | **Business Intelligence** | Deliver interactive dashboards and KPIs through Power BI. |
+
+## Data Warehouse Design
+
+The analytical repository follows a dimensional modeling approach based on the Kimball methodology. The warehouse was designed to simplify reporting, improve query performance, and provide a consistent view of customer experience metrics.
+
+The model separates business events into fact tables while descriptive information is organized into conformed dimensions, allowing flexible slicing and filtering across multiple business perspectives.
+
+<p align="center">
+  <img src="assets/star-schema.png" alt="Star Schema" width="700"/>
+</p>
+
+| Component  | Description                                    |
+| ---------- | ---------------------------------------------- |
+| Fact Table | Customer experience events                     |
+| Dimensions | Date, Channels, Promoters, Duration of the incident. |
+
+
+
