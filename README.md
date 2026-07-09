@@ -35,12 +35,12 @@ The solution follows a layered Business Intelligence architecture that separates
 This design improves data quality, simplifies maintenance, and provides a reliable foundation for business reporting and analytics.
 
 <p align="center">
-  <img src="assets/architecture.png" alt="Solution Architecture" width="900"/>
+  <img src="assets/architecture.png" alt="Solution Architecture" width="850"/>
 </p>
 
 |      Layer         |                                    Purpose                                         |
 |     --------       |                                   ---------                                        |
 | **Data Sources**   | Collect customer surveys and operational incident data from multiple files.        |
-| **ETL**            | Extract, clean, validate, standardize, and transform data using Pentaho Data Integration.   |
+| **ETL**            | Extract, clean, validate, standardize, transform and load data using Pentaho Data Integration.   |
 | **Data Warehouse** | Store integrated data in a PostgreSQL dimensional model optimized for analytics. |
 | **Business Intelligence** | Deliver interactive dashboards and KPIs through Power BI. |
