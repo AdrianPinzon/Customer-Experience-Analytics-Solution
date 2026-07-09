@@ -35,7 +35,7 @@ The solution follows a layered Business Intelligence architecture that separates
 This design improves data quality, simplifies maintenance, and provides a reliable foundation for business reporting and analytics.
 
 <p align="center">
-  <img src="assets/architecture.png" alt="Solution Architecture" width="850"/>
+  <img src="assets/architecture.png" alt="Solution Architecture" width="500"/>
 </p>
 
 |      Layer         |                                    Purpose                                         |
